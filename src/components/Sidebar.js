@@ -2,10 +2,17 @@ import React from "react";
 import { FaProductHunt } from "react-icons/fa";
 import { BsBagCheck, BsPeopleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Sidebar = () => {
+const Sidebar = ({ side, closeSideNav }) => {
   return (
-    <div className="bg-gray-800 h-screen w-64 fixed top-0 left-0">
+    <div
+      className={`bg-gray-800 h-screen w-64 fixed top-0 ${side} md:left-0 z-10 transition-all`}
+    >
+      <AiOutlineClose
+        onClick={closeSideNav}
+        className="absolute top-4 right-4 text-2xl cursor-pointer md:hidden block"
+      />
       <div className="p-5 bg-gray-200">
         <img src="/logo.png" alt="logo" />
       </div>
