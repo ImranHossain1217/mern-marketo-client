@@ -35,6 +35,12 @@ const Sidebar = ({ side, closeSideNav }) => {
             customers
           </Link>
         </li>
+        <li className="px-4 py-3 cursor-pointer text-white flex items-center hover:bg-gray-600 transition-all font-serif">
+          <BsPeopleFill className="mr-2 inline-block" />{" "}
+          <Link to="/dashboard/categories" className="capitalize text-base">
+            Add Categories
+          </Link>
+        </li>
       </ul>
     </div>
   );
